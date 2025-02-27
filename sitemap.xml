@@ -2,7 +2,7 @@
 <sitemapindex xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
    <sitemap>
       <loc>https://www.assetflowautomations.com/</loc>
-      <lastmod>2025-01-25</lastmod>
+      <lastmod>2025-02-26</lastmod>
    </sitemap>
    <sitemap>
       <loc>https://www.assetflowautomations.com/use-cases/</loc>
@@ -47,5 +47,9 @@
    <sitemap>
       <loc>https://media.assetflowautomations.com/blogs/</loc>
       <lastmod>2025-01-25</lastmod>
+   </sitemap>
+   <sitemap>
+      <loc>https://afa.assetflowautomations.com/</loc>
+      <lastmod>2025-02-27</lastmod>
    </sitemap>
 </sitemapindex>
