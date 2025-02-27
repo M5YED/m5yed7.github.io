@@ -1,0 +1,1014 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Error</title>
+    <link rel="sitemap" type="application/xml" href="https://www.assetflowautomations.com/sitemap.xml" />
+    <link rel="apple-touch-icon" sizes="57x57" href="/apple-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="/apple-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="/apple-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="/apple-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="/apple-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="/apple-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="/apple-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="/apple-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-icon-180x180.png">
+    <link rel="icon" type="image/png" sizes="192x192"  href="/android-icon-192x192.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="/favicon-96x96.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="manifest" href="/manifest.json">
+    <meta name="msapplication-TileColor" content="#054708"> 
+    <meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
+    <meta name="msapplication-TileImage" content="/ms-icon-150x150.png">
+    <meta name="msapplication-TileImage" content="/ms-icon-310x310.png">
+    <meta name="msapplication-TileImage" content="/ms-icon-70x70.png">
+    <meta name="theme-color" content="#054708">
+    <meta property="og:image" content="/AssetFlow_Open_Graph_Image.png" />
+    <meta property="og:image:type" content="image/png" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:title" content="AssetFlow Automations" />
+    <meta property="og:description" content="Get custom automation systems to save your business time. Our systems are all built to perfection." />
+    <meta property="og:url" content="https://www.assetflowautomations.com/" />
+    <meta property="og:type" content="website" />
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="AssetFlow Automations">
+    <meta name="twitter:description" content="Save your business from wasted time. Order an automation system today.">
+    <meta name="twitter:image" content="/x-icon.png">
+    <style>
+    /* Reset and General Styling */
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+    @font-face {
+        font-family: 'HORIZON'; /* Normal Horizon font */
+        src: url('horizon.otf') format('opentype'); /* Use 'opentype' for .otf files */
+        font-weight: normal;
+        font-style: normal;
+    }
+
+    @font-face {
+        font-family: 'HORIZON-OUTLINED'; /* Outlined Horizon font */
+        src: url('horizon_outlined.otf') format('opentype'); /* Use 'opentype' for .otf files */
+        font-weight: normal;
+        font-style: normal;
+    }
+        
+    @font-face {
+        font-family: 'GP-SB'; /* Georgia Pro Semi-Bold font */
+        src: url('GeorgiaPro-SemiBold.ttf') format('truetype'); /* Use 'truetype' for .ttf files */
+        font-weight: normal;
+        font-style: normal;
+    }
+        
+    @font-face {
+        font-family: 'TNR'; /* Times New Roman font */
+        src: url('times-new-roman-italic.ttf') format('truetype'); /* Use 'truetype' for .ttf files */
+        font-weight: normal;
+        font-style: normal;
+    }
+        
+    /* Intro overlay styling */
+    #intro {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: #054708;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        z-index: 9999;
+        overflow: hidden;
+        transition: opacity 0.5s ease; /* Smooth fade-out transition */
+    }
+
+    /* Spinner container to center the images */
+    .spinner-container {
+        position: relative;
+        width: 200px;
+        height: 200px;
+    }
+
+    /* Shared spinner styles */
+    .spinner {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        animation-timing-function: linear;
+        animation-iteration-count: infinite;
+    }
+
+    /* Back image spinning clockwise */
+    .back-image {
+        position: absolute; /* Ensure it respects z-index */
+        animation: spinClockwise 2s infinite;
+        z-index: 1; /* Ensure back image is behind */
+    }
+
+    .front-image {
+        position: absolute; /* Ensure it respects z-index */
+        animation: spinCounterclockwise 2s linear infinite; /* 3s duration with constant speed */
+        z-index: 2; /* Ensure front image is above */
+        background-color: transparent; /* Ensure no background color */
+    }
+    
+
+    /* Keyframes for clockwise spin */
+    @keyframes spinClockwise {
+        0% {
+            transform: translate(-50%, -50%) rotate(0deg);
+        }
+        100% {
+            transform: translate(-50%, -50%) rotate(360deg);
+        }
+    }
+
+    /* Keyframes for counterclockwise spin */
+    @keyframes spinCounterclockwise {
+        0% {
+            transform: translate(-50%, -50%) rotate(0deg);
+        }
+        100% {
+            transform: translate(-50%, -50%) rotate(-360deg);
+        }
+    }
+
+    body {
+        font-family: 'TNR', sans-serif;
+        padding-top: 74px; /* Matches header height */
+    }
+
+    /* Header Styling */
+    header {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        background-color: #054708;
+        padding: 15px 40px;
+        z-index: 1000;
+    }
+
+    .header-content {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    .logo {
+        width: 60px;
+        height: 60px;
+        margin: 0 24px;
+    }
+        
+    h1 {
+        color: #FFFFFF;
+        font-family: 'HORIZON', sans-serif; 
+        font-size: 36px;
+        margin: 0;
+        flex-grow: 1;
+    }
+
+    h2 {
+        color: #FFFFFF;
+        font-family: 'HORIZON-OUTLINED', sans-serif; 
+        font-size: 36px;
+        margin: 0;
+        flex-grow: 1;
+    }
+    h3 {
+        color: #FFFFFF;
+        font-family: 'GP-SB', sans-serif; 
+        font-size: 25px;
+        margin: 0;
+        flex-grow: 1;
+    }
+    h4 {
+        color: #FFFFFF;
+        font-family: 'TNR', serif; 
+        font-size: 15px;
+        margin: 0;
+        flex-grow: 1;
+    }
+        
+
+    /* General Styles */
+    #section_1 {
+        background-color: #A52A2A;
+        padding: 20px;
+        overflow: hidden; /* Prevents content from popping out */
+    }
+
+    .line-center {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+        gap: 10px;
+    }
+
+    .project-eco {
+        display: flex; /* Ensures elements are on the same line */
+        align-items: center; /* Vertically aligns content */
+        justify-content: center; /* Centers content horizontally */
+        gap: 2px; /* Adds spacing between elements */
+        text-align: center; /* Centers text within the container */
+        flex-wrap: nowrap; /* Prevents elements from wrapping onto multiple lines */
+    }
+
+    .project-eco img {
+        max-width: 36px; /* Adjusts image size */
+        height: auto; /* Maintains aspect ratio */
+        vertical-align: middle; /* Aligns images with text */
+    }
+
+    .line-center {
+        display: flex; /* Aligns child elements horizontally */
+        justify-content: center; /* Centers the `.project-eco` container */
+        align-items: center; /* Ensures vertical alignment */
+        flex-wrap: nowrap; /* Prevents wrapping of content */
+        margin: 20px 0; /* Adds spacing above and below the section */
+    }
+
+
+
+    /* Navigation Button Styling */
+    nav {
+        display: flex;
+        gap: 100px;
+    }
+
+    nav button {
+        background-color: transparent;
+        border: 2px solid #EFFE8A;
+        color: #FFFFFF;
+        padding: 10px 20px;
+        font-size: 16px;
+        font-family: 'GP-SB', sans-serif;
+        cursor: pointer;
+    }
+
+    nav button:hover {
+        background-color: #EFFE8A;
+        color: #080027;
+    }
+
+    /* Button styling */
+    .glow-button {
+        padding: 10px 20px;
+        font-size: 16px;
+        background-color: #ff7f00;
+        color: #FFFFFF;
+        border: none;
+        cursor: pointer;
+        margin-top: 20px;
+        transition: box-shadow 0.3s ease, transform 0.3s ease; /* Smooth effect */
+    }
+
+    /* Glow effect on hover */
+    .glow-button:hover {
+        box-shadow: 0 0 15px 5px #A52A2A, 0 0 30px 10px #A52A2A; /* Glowing effect */
+        transform: scale(1.05); /* Slightly enlarges the button */
+    }
+
+    /* Main Background Styling */
+    .background-wrapper {
+        background-image: url('backgroundimage1.jpg'); 
+        background-size: cover;
+        background-attachment: fixed;
+        background-position: center;
+        padding: 0 20px; /* Adds padding to avoid overlap */
+        max-width: 100vw;
+        box-sizing: border-box; /* Ensures padding is within viewport width */
+        min-height: 100vh;
+    }
+
+    section {
+        background-color: rgba(255, 255, 255, 0.9);
+        padding: 20px;
+        margin: 20px auto;
+        border-radius: 8px;
+        box-shadow: 0px 4px 15px rgba(0, 0, 0, 1);
+        max-width: 90vw;
+    }
+
+    /* Text container and Image styling */
+    .text-container {
+        text-align: center;
+        color: #000000;
+        padding: 10px;
+    }
+
+    .image-container img {
+        width: 40vw;
+        height: auto;
+        max-width: 100%;
+    }
+
+    /* Container styling for positioning */
+    .gold-menu-container {
+        position: relative; /* Relative to allow overlay positioning */
+    }
+
+    /* Gold button styling */
+    .gold-menu-button {
+        background-color: #FFD700; /* Gold background */
+        color: #000; /* Black text for contrast */
+        font-size: 24px; /* Large button text */
+        border: 2px solid #B8860B; /* Slightly darker border */
+        border-radius: 5px;
+        padding: 10px 20px;
+        cursor: pointer;
+        animation: infinite-glow 1.5s infinite; /* Faster and more dynamic glow */
+        box-shadow: 0 0 20px rgba(255, 0, 0, 0.8); /* Stronger initial glow */
+        transition: transform 0.2s ease, box-shadow 0.2s ease, background-color 0.2s ease;
+    }
+
+    .gold-menu-button:hover {
+        background-color: #FFDF00; /* Lighter gold on hover */
+        box-shadow: 0 0 30px rgba(255, 0, 0, 1), 0 0 40px rgba(255, 0, 0, 0.8); /* Strong multi-layered glow */
+        transform: scale(1.1); /* Slightly larger scale on hover */
+        animation: none; /* Stop infinite glow on hover */
+    }
+
+    /* Infinite glowing animation with stronger intensity */
+    @keyframes infinite-glow {
+        0%, 100% {
+            background-color: #FFD700; /* Initial gold */
+            box-shadow: 0 0 20px rgba(255, 0, 0, 0.8); /* Moderate red glow */
+        }
+        50% {
+            background-color: #FFC300; /* Slightly darker gold */
+            box-shadow: 0 0 40px rgba(255, 0, 0, 1), 0 0 50px rgba(255, 0, 0, 0.8); /* Intense multi-layered glow */
+        }
+    }
+
+    /* Hidden overlay by default */
+    .menu-overlay {
+        position: absolute;
+        top: 50px; /* Positioned below the button */
+        right: -30px;
+        background-color: rgba(0, 0, 0, 0.9); /* Semi-transparent black */
+        color: #FFD700; /* Gold text color */
+        width: 200px;
+        display: none; /* Hidden initially */
+        flex-direction: column;
+        gap: 10px;
+        padding: 10px;
+        border-radius: 5px;
+        box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
+        opacity: 0; /* Transparent initially */
+        transform: translateY(-20px); /* Slide up initially */
+        transition: opacity 0.3s ease, transform 0.3s ease; /* Smooth fade and slide */
+        overflow-y: auto; /* Adds vertical scroll when content overflows */
+        max-height: 300px; /* Limit the height of the overlay */
+    }
+
+    /* Links inside the overlay */
+    .menu-overlay a {
+        text-decoration: none;
+        color: #FFD700; /* Gold links */
+        font-size: 18px;
+        font-family: Arial, sans-serif;
+        transition: color 0.2s ease;
+        cursor: pointer;
+    }
+
+    .menu-overlay a:hover {
+        color: #FFDF00;
+    }
+
+    /* Active menu overlay (visible with animation) */
+    .menu-overlay.active {
+        display: flex; /* Display as a column */
+        opacity: 1; /* Fully visible */
+        transform: translateY(0); /* Slide into place */
+    }
+        
+    .preview-container {
+        position: relative; /* Ensures the iframe is positioned relative to the container */
+        display: inline-block; /* Groups button and iframe together */
+    }
+
+    #preview-button {
+        padding: 10px 20px;
+        background-color: #A52A2A;
+        color: #FFFFFF;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        font-family: 'Arial', sans-serif;
+    }
+
+    #preview-button:hover {
+        background-color: #8B0000; /* Slightly darker red for hover effect */
+    }
+
+    #iframe-preview {
+        display: none; /* Hidden by default */
+        position: absolute;
+        top: 110%; /* Below the button */
+        left: -150%;
+        width: 40vw;
+        height: 60vh;
+        border: 1px solid #CCC;
+        box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+        z-index: 10;
+        background-color: #FFFFFF;
+    }
+
+    /* General overlay styling */
+    #cookie-overlay {
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        background: rgba(0, 0, 0, 0.8);
+        color: #fff;
+        padding: 20px;
+        box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.5);
+        opacity: 0;
+        visibility: hidden;
+        transform: translateY(10px);
+        transition: opacity 0.5s ease-in-out, visibility 0.5s ease-in-out, transform 0.5s ease-in-out;
+    }
+
+    #cookie-overlay.visible {
+        opacity: 1;
+        visibility: visible;
+        transform: translateY(0);
+        z-index: 1;
+    }
+
+    /* Cookie content box */
+    .cookie-content {
+        max-width: 600px;
+        margin: 0 auto;
+        text-align: center;
+        padding: 20px;
+        border-radius: 8px;
+        color: #000;
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+        z-index: 1;
+    }
+
+    .cookie-content h2 {
+        margin-bottom: 10px;
+        font-size: 1.5em;
+        z-index: 1;
+    }
+    
+    .cookie-text {
+        max-height: 100px;
+        overflow-y: auto;
+        margin: 10px 0;
+        padding: 10px;
+        background: rgba(255, 255, 255, 0.1);
+        border-radius: 5px;
+        text-align: left;
+        font-size: 0.9em;
+        z-index: 1;
+    }
+
+    .cookie-text a {
+        color: #054708;
+        text-decoration: underline;
+    }
+
+    .cookie-buttons {
+        display: flex;
+        justify-content: center;
+        gap: 10px;
+        margin-top: 15px;
+        z-index: 1;
+    }
+
+    .btn {
+        padding: 10px 20px;
+        font-size: 1em;
+        color: #fff;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        z-index: 1;
+    }
+
+    .btn.manage {
+        background: #4caf50;
+        z-index: 1;
+    }
+
+    .btn.accept {
+        background: #007bff;
+        z-index: 1;
+    }
+
+    .btn:hover {
+        opacity: 0.9;
+    }
+
+    #white-overlay {
+        position: fixed;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        background: #fff;
+        color: #000;
+        padding: 30px;
+        border-radius: 8px;
+        font-size: 1.2em;
+        font-weight: bold;
+        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+        z-index: 1100;
+        display: none;
+        text-align: center;
+        width: 80%;
+        max-width: 400px;
+    }
+
+    #white-overlay p {
+        margin: 0;
+        font-size: 1em;
+        }
+
+    #manage-preferences-overlay {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(255, 255, 255, 1);
+        color: #000;
+        z-index: 1100;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 20px;
+        box-sizing: border-box;
+    }
+
+    .hidden {
+        display: none;
+        }
+
+    .manage-content {
+        width: 100%;
+        max-width: 400px;
+        background: #fff;
+        border-radius: 8px;
+        padding: 20px;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+        text-align: center;
+    }
+
+    .manage-content h2 {
+        margin-bottom: 20px;
+        font-size: 1.5em;
+    }
+
+    .preferences-section {
+        margin-bottom: 20px;
+    }
+
+    .toggle-wrapper {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 15px;
+    }
+
+    .toggle-wrapper span {
+        font-size: 1em;
+    }
+
+    .toggle-input {
+        display: none;
+    }
+
+    .toggle-input-blocked {
+        display: none;
+    }
+
+    .toggle-slider {
+        position: relative;
+        width: 50px;
+        height: 25px;
+        background: #ccc;
+        border-radius: 15px;
+        cursor: pointer;
+        transition: background 0.3s;
+    }
+
+    .toggle-slider:before {
+        content: '';
+        position: absolute;
+        top: 2px;
+        left: 2px;
+        width: 21px;
+        height: 21px;
+        background: #ccc;
+        border-radius: 50%;
+        transition: transform 0.3s;
+    }
+
+
+    .toggle-slider-blocked {
+        position: relative;
+        width: 50px;
+        height: 25px;
+        background: #B22222;
+        border-radius: 15px;
+        cursor: pointer;
+        transition: background 0.3s;
+    }
+        
+    .toggle-slider-blocked:before {
+        content: '';
+        position: absolute;
+        top: 2px;
+        width: 21px;
+        height: 21px;
+        background: #ccc;
+        border-radius: 50%;
+        transition: background 0.3s;
+    }
+
+    .toggle-input:checked + .toggle-slider {
+        background: #054708;
+    }
+
+    .toggle-input:checked + .toggle-slider:before {
+        transform: translateX(25px);
+    }
+
+    .toggle-input-blocked:checked + .toggle-slider-blocked {
+        background: #B22222;
+    }
+
+    .toggle-input-blocked:checked + .toggle-slider-blocked:before {
+        transform: translateX(0px);
+    }
+
+    .manage-buttons {
+        display: flex;
+        justify-content: space-between;
+        gap: 10px;
+    }
+
+    .btn {
+        padding: 10px 20px;
+        font-size: 1em;
+        color: #fff;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        transition: opacity 0.3s;
+    }
+
+    .btn.back {
+        background: #6c757d; /* Grey for back */
+    }
+
+    .btn.save {
+        background: #4caf50; /* Green for Save & Exit */
+    }
+
+    .vertical-line {
+        height: 500px;
+        align-self: stretch;
+    }
+
+
+/* Hover effect for non-mobile screens */
+@media (min-width: 769px) {
+    .preview-container:hover #iframe-preview {
+        display: block;
+    }
+}
+
+    
+/* Mobile Styling */
+@media (max-width: 768px) {
+    header {
+        padding: 2px 15px;
+        max-height: 30vh;
+        z-index: 10;
+    }
+
+    .header-content {
+        flex-direction: column;
+        align-items: center;
+        gap: 5px;
+    }
+
+    .logo {
+        width: 35px;
+        height: 35px;
+        margin-bottom: 5px;
+    }
+
+    .header-title {
+        font-size: 16px;
+        margin: 0;
+    }
+
+
+    h1 {
+        font-size: 20px;
+        text-align: center;
+        margin: 10px 0; /* Adds space between header and content */
+    }
+
+    nav {
+        gap: 10px;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    nav button {
+        font-size: 14px;
+        padding: 8px 15px;
+    }
+
+    body {
+        padding-top: 185px; /* Matches header height + spacing */
+    }
+
+    .background-wrapper {
+        padding: 0 10px;
+        background-image: url('backgroundimage1.jpg'); 
+        background-size: cover;
+        background-attachment: fixed;
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+    }
+    .project-eco img {
+        width: 24px;
+    }
+
+    .project-eco h2 {
+        font-size: 24px;
+    }
+    
+    #iframe-preview {
+        display: none !important;
+    }
+
+    #preview-button {
+        font-size: 14px;
+        padding: 8px 12px;
+    }
+
+    .menu-overlay {
+        top: 60px;
+        left: -75px;
+    }
+
+    #demos > div {
+        flex-direction: column;
+        align-items: center;
+    }
+    #demos div > div {
+        margin: 20px 0;
+    }
+    .vertical-line {
+        height: 200px;
+    }
+
+    #Demo-Part-1 > div {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+    }
+
+    #Demo-Part-1 .vertical-line,
+    #Demo-Part-1 div[style*="height: 2px"] {
+        display: none;
+    }
+
+    #Demo-Part-1 div > div {
+        margin: 20px 0;
+    }
+}
+
+        
+@media (max-width: 700px) {
+    section {
+        padding: 15px;
+        margin: 10px auto;
+        max-width: 100vw;
+    }
+
+    .text-container {
+        padding: 5px;
+    }
+
+    .image-container img {
+        width: 80vw;
+    }
+
+    header {
+        padding-bottom: 10px; /* Adds space below header */
+    }
+}
+
+@media (max-width: 480px) {
+    .project-eco img {
+        width: 18px;
+    }
+
+    .project-eco h2 {
+        font-size: 18px;
+    }
+}
+</style>
+
+    
+<!-- Main website content -->
+<div id="main-content">
+    <header>
+        <div class="header-content">
+            <!-- Company Logo -->
+            <a href="https://www.assetflowautomations.com/">
+                <img src="AFALogoYellow.png" alt="AssetFlow Automations Logo" class="logo">
+            </a>
+
+            <!-- Company Name -->
+            <h1>AssetFlow Automations</h1>
+
+<div style="display: flex; text-align: left;">
+<!-- Gold Menu -->
+<nav class="gold-menu-container">
+    <button class="gold-menu-button" onclick="toggleMenu()">☰</button>
+    <div id="menu-overlay" class="menu-overlay">
+        <h3 style="font-size: 20px;">Main</h3>
+        <a href="https://www.assetflowautomations.com/">Home</a>
+        <a href="https://service.assetflowautomations.com/">Service</a>
+        <a href="https://pricing.assetflowautomations.com/">Pricing</a>
+        <br>
+        <h3 style="font-size: 20px;">Plans</h3>
+        <a href="https://service.assetflowautomations.com/purchaser">Hand-Off</a>
+        <a href="https://service.assetflowautomations.com/purchaser/management">Management</a>        
+        <br>
+        <h3 style="font-size: 20px;">Documentation</h3>
+        <a href="https://documentation.assetflowautomations.com/">Documents</a>
+        <a href="https://documentation.assetflowautomations.com/2.0">Documents 2.0</a>
+        <br>
+        <h3 style="font-size: 20px;">Other</h3>
+        <a href="https://media.assetflowautomations.com/blogs/">Blogs</a>
+        <a href="https://www.assetflowautomations.com/use-cases/">Use Cases</a>
+        <a href="https://ratings.assetflowautomations.com/">Reviews</a>        
+        <a href="https://uk.trustpilot.com/review/assetflowautomations.com?utm_medium=trustbox&utm_source=TrustBoxReviewCollector">Rate Us</a>        
+        <br>
+        <h3 style="font-size: 20px;">Contact</h3>
+        <a href="mailto:support@assetflowautomations.com?subject=Support%20Request&body=Hello%2C%0D%0A%0D%0AI%20need%20assistance%20with...">Support(email)</a>
+        <a href="mailto:info@assetflowautomations.com?subject=Information%20Request&body=Dear%20Team%2C%0D%0A%0D%0AI%20would%20like%20to%20know%20more%20about...">Info(email)</a>
+<a href="https://wa.me/447887333872?text=Hello%2C%20I'm%20interested%20in%20your%20services" target="_blank">WhatsApp</a>
+        <br>       
+    </div>
+</nav>
+</div>
+        </div>
+    </header>
+</div>
+
+<!--CSS-->
+<style>
+    @media (max-width: 768px) {
+        .menu-overlay {
+            top: 60px; 
+            left: -75px;
+        }
+    }
+</style>
+<!-- JavaScript -->
+<script>
+function toggleMenu() {
+    const menu = document.getElementById('menu-overlay');
+    if (menu.classList.contains('active')) {
+        menu.style.opacity = '0'; // Fade out
+        setTimeout(() => {
+            menu.style.display = 'none'; // Hide after fade-out
+            menu.classList.remove('active'); // Remove active class
+        }, 300); // Match transition duration
+    } else {
+        menu.style.display = 'flex'; // Show before fading in
+        setTimeout(() => {
+            menu.classList.add('active'); // Add active class for fade-in
+            menu.style.opacity = '1'; // Trigger fade-in
+        }, 10); // Delay for smooth transition
+    }
+}
+</script>
+<script>
+// Smooth scrolling script
+function scrollToSection(sectionId) {
+    const section = document.getElementById(sectionId);
+    if (section) {
+        section.scrollIntoView({ behavior: 'smooth' });
+    }
+}
+</script>
+<!-- This sends the UserID to the Database. DO NOT EDIT!-->
+<script>
+// List of fruit names
+const fruits = [
+  "Apple", "Apricot", "Avocado", "Banana", "Blackberry", "Blueberry", "Boysenberry", "Cantaloupe", "Carambola", "Cherry", "Clementine", "Coconut", "Cranberry", "Currant", "Date", "Dragonfruit", "Durian", "Elderberry", "Fig", "Gooseberry", "Grape", "Grapefruit", "Guava", "Honeydew", "IndianFig", "Jackfruit", "Jujube", "Kiwi", "Kumquat", "Lemon", "Lime", "Longan", "Lychee", "Mango", "Mangosteen", "Mulberry", "Nectarine", "Olive", "Orange", "Papaya", "PassionFruit", "Peach", "Pear", "Persimmon", "Pineapple", "Plantain", "Plum", "Pomegranate", "Pomelo", "Quince", "Raspberry", "Rambutan", "Redcurrant", "Salak", "Sapodilla", "Soursop", "StarApple", "Starfruit", "Strawberry", "Tamarind", "Tangerine", "UgliFruit", "Watermelon", "WhiteCurrant", "Wolfberry", "Yumberry", "Zucchini", "Acai", "Aronia", "Bacaba", "Bignay", "BitterMelon", "Breadfruit", "Cempedak", "Cupuacu", "Feijoa", "HalaFruit", "Illama", "Jaboticaba", "Langsat", "MameySapote", "Mamoncillo", "Marang", "MiracleFruit", "Nance", "Pequi", "Pitanga", "Pitaya", "Santol", "Sapote", "SurinamCherry", "Tepache", "Voavanga", "Yangmei", "Abiu", "Acerola", "AfricanBreadfruit", "AfricanMango", "Akee", "Ambarella", "Atemoya", "BalsamApple", "BarbadosCherry", "Bayberry", "BetelNut", "Bilberry", "BlackSapote", "Breadnut", "BuddhasHand", "Caimito", "Calamansi", "CamuCamu", "Canistel", "CapeGooseberry", "CashewApple", "Chayote", "Cherimoya", "Chokeberry", "Chontaduro", "Citron", "ClusterFig", "Cocona", "Cowa", "CustardApple", "Damson", "DesertDate", "Duku", "ElephantApple", "FingerLime", "GacFruit", "GaliaMelon", "GoldenApple", "Goumi", "GovernorPlum", "Grumichama", "HogPlum", "IceCreamBean", "IndianGooseberry", "IndianJujube", "IndianPrune", "IndianWalnut", "JamaicanPlum", "Jocote", "Kabosu", "KaffirLime", "Karkalla", "KeiApple", "Korlan", "Kutjera", "Lakoocha", "Lapsi", "Limeberry", "MacadamiaNut", "Madrono", "MalayApple", "MammeeApple", "Mangaba", "ManilaTamarind", "Marula", "Medlar", "MonkeyOrange", "MonsteraDeliciosa", "Mundu", "NatalPlum", "Noni", "OkariNut", "Pandanus", "PeachPalm", "PigeonPea", "Pitomba", "PondApple", "Pulasan", "Quandong", "RataFruit", "Rollinia", "Roselle", "Safou", "Santol", "SeaGrape", "Serviceberry", "SnowBerry", "Soncoya", "SpanishLime", "StrawberryGuava", "SugarApple", "SweetLemon", "TahitianChestnut", "TalipotPalm", "Tamarillo", "TaroFruit", "VelvetApple", "Wampee", "WaxJambu", "WhiteSapote", "WildMangosteen", "YellowDragonfruit", "YunnanHackberry", "ZabergauReinette", "ZigZagVine"
+];
+
+const AIRTABLE_API_KEY = "pat8lyKHm2FpbPRje.eedcaae3c12ce2fba31041e0b9721d273b6db561889975a835e9c0f6684b87cf";
+const AIRTABLE_BASE_ID = "appKHweelVI0KcjjE";
+const AIRTABLE_TABLE_NAME = "Error";
+
+// Store the recordId in a variable to use it later for deletion
+let recordId = null;
+
+// Function to generate a random fruit-based user ID
+function generateUserId() {
+  const randomFruit = fruits[Math.floor(Math.random() * fruits.length)];
+  const uniqueNumber = Date.now().toString().slice(-6); // Adds a unique number
+  return `${randomFruit}-${uniqueNumber}`;
+}
+
+// Function to send data to Airtable and return recordId
+async function sendToAirtable(userId) {
+  const url = `https://api.airtable.com/v0/${AIRTABLE_BASE_ID}/${AIRTABLE_TABLE_NAME}`;
+  
+  const data = {
+    fields: {
+      User: userId,
+    }
+  };
+
+  try {
+    const response = await fetch(url, {
+      method: "POST",
+      headers: {
+        "Authorization": `Bearer ${AIRTABLE_API_KEY}`,
+        "Content-Type": "application/json"
+      },
+      body: JSON.stringify(data)
+    });
+
+    if (response.ok) {
+      const result = await response.json();
+      recordId = result.id; // Store the recordId globally
+      console.log("User ID sent to Airtable:", userId);
+      console.log("Saved record ID:", recordId);
+
+      // Store recordId in localStorage
+      localStorage.setItem("recordId", recordId);
+      return recordId; // Return the recordId if needed
+    } else {
+      console.error("Error sending data to Airtable:", response.status, await response.text());
+      return null;
+    }
+  } catch (error) {
+    console.error("Failed to send user ID to Airtable:", error);
+    return null;
+  }
+}
+
+// Main logic to execute on page load
+window.onload = async () => {
+  const userId = generateUserId();
+  console.log("Generated User ID:", userId);
+
+  try {
+    const recordId = await sendToAirtable(userId);
+    if (recordId) {
+      console.log("Record successfully created with ID:", recordId);
+    } else {
+      console.error("Failed to create record");
+    }
+  } catch (error) {
+    console.error("Failed to send user ID to Airtable:", error);
+  }
+};
+</script>
+<!-- This sends the UserID to the Database. DO NOT EDIT!-->
+<body><br><br><br><br><br><center><h1 style="color: #054708;">uh oh!<br>This isn't the page you were looking for.<br>Why don't you head home?</h1><br><button onclick="window.location.href='https://www.assetflowautomations.com/'" class="glow-button">Come on, Let's go home...</button><br>
+<script type="text/javascript">
+  (function(d, t) {
+      var v = d.createElement(t), s = d.getElementsByTagName(t)[0];
+      v.onload = function() {
+        window.voiceflow.chat.load({
+          verify: { projectID: '6793b7b8350d655370728ba7' },
+          url: 'https://general-runtime.voiceflow.com',
+          versionID: 'production'
+        });
+      }
+      v.src = "https://cdn.voiceflow.com/widget-next/bundle.mjs"; v.type = "text/javascript"; s.parentNode.insertBefore(v, s);
+  })(document, 'script');
+</script>
+</center></body>
+</html>
